@@ -1,0 +1,11 @@
+
+{
+    "name": "davyin/dyniva_core",
+    "description": "admin theme for drupal.",
+    "type": "drupal-custom-module",
+    "license": "GPL-2.0-or-later",
+    "homepage": "https://github.com/davyin-co/dyniva_core",
+    "require": {
+        "drupal/core": "^8.6.0"
+    }
+}
