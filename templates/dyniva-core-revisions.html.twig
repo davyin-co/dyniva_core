@@ -1,0 +1,27 @@
+<div> </div>
+{% for date, rows in items %}
+<div class="media">
+  <div class="media-left text-nowrap">
+    <i class="glyphicon glyphicon-calendar"></i> {{ date }}
+  </div>
+  <div class="media-body">
+    <ul>
+      {% for item in rows %}
+      <li>
+        <!-- <h5 class="media-heading log">Revision {{ item.vid }}, {{ item.state }},  {{ item.view }} {% if item.current %}(current version){% endif %}</h5> -->
+        <h5 class="media-heading log">{{ item.state }} ({{ item.index }}){% if item.state %},  {% endif %}{{ item.view }} | {{ item.revert }}{% if item.current %}(current version){% endif %}</h5>
+        <div class="user">
+          <i class="glyphicon glyphicon-user"></i> {{ item.user }} {{ item.date }}
+        </div>
+        {% for comment in item.comments %}
+        <div class="comment">
+          {{ comment }}
+        </div>
+        {% endfor %}
+      </li>
+      {% endfor %}
+    </ul>
+
+  </div>
+</div>
+{% endfor %}

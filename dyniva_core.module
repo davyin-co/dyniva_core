@@ -63,6 +63,11 @@ function dyniva_core_theme() {
         'variables' => NULL,
       ],
     ],
+    'dyniva_core_revisions' => [
+      'template' => 'dyniva-core-revisions',
+      'path' => drupal_get_path('module', 'dyniva_core') . '/templates',
+      'variables' => ['items' => array()],
+    ],
   ];
 }
 
