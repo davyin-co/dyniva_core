@@ -1,6 +1,6 @@
 name: 'Dyniva Core'
 type: module
-core: 8.x
+core_version_requirement: ^8.8 || ^9
 package: Dyniva
 dependencies:
   - allowed_formats
