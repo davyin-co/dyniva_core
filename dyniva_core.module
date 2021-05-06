@@ -7,6 +7,7 @@
 
 include_once 'dyniva_core.inc';
 
+use Drupal\Component\Utility\Html;
 use Drupal\field\Entity\FieldConfig;
 use Drupal\dyniva_core\CcmsCoreEntityModerateAccess;
 use Drupal\Core\Routing\RouteMatchInterface;
@@ -665,6 +666,7 @@ function dyniva_core_user_format_name_alter(&$name, $account) {
     if($account->get('full_name')->value)
       $name = $account->get('full_name')->value;
   }
+  $name =  Html::escape($name);
 }
 
 function dyniva_core_node_form_validate(array &$form, FormStateInterface $form_state) {
