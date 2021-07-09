@@ -179,7 +179,7 @@ class CurrentPathHelper implements PathHelperInterface {
    */
   protected function createUrlFromRelativeUri($relativeUri) {
     // @see https://www.drupal.org/node/2810961
-    if (UrlHelper::isExternal(substr($relativeUri, 1))) {
+    if (UrlHelper::isExternal(ltrim($relativeUri, '/'))) {
       return Url::fromUri('base:' . $relativeUri);
     }
 
